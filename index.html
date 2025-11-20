@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terratern - Your Immigration Partner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,8 +13,8 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #00215c 0%, #255cc1 100%);
+            font-family: 'Poppins', sans-serif;
+            background: #255cc1;
             min-height: 100vh;
             padding: 20px;
             display: flex;
@@ -34,17 +35,61 @@
         }
 
         .logo {
-            width: 350px;
-            height: 350px;
+            width: 200px;
+            height: 200px;
             background: white;
-            border-radius: 24px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-            color: #255cc1;
-            font-weight: bold;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tagline {
+            text-align: center;
+            color: white;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        .tagline-main {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #f1c819;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            font-weight: 400;
+            color: #9acbfd;
+            margin-top: 2px;
         }
 
         .links {
@@ -58,15 +103,59 @@
             background: white;
             color: #00215c;
             text-decoration: none;
-            padding: 18px 24px;
+            padding: 20px 24px;
             border-radius: 12px;
-            font-weight: 600;
-            font-size: 16px;
-            text-align: center;
+            font-weight: 500;
+            font-size: 15px;
+            text-align: left;
+            line-height: 1.4;
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .link-title {
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .link-subtitle {
+            font-size: 13px;
+            color: #4a5568;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-left: 28px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f1c819 0%, #f39c12 100%);
+            color: #00215c;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 12px;
+            margin-left: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-urgent {
+            background: linear-gradient(135deg, #ff4757 0%, #e84118 100%);
+            color: white;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
         }
 
         .link-button::before {
@@ -140,14 +229,43 @@
 
         @media (max-width: 480px) {
             .logo {
-                width: 280px;
-                height: 280px;
-                font-size: 20px;
+                width: 160px;
+                height: 160px;
+            }
+
+            .tagline-main {
+                font-size: 16px;
+                padding: 0 10px;
+            }
+
+            .stats {
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 22px;
+            }
+
+            .stat-label {
+                font-size: 11px;
             }
 
             .link-button {
-                padding: 16px 20px;
+                padding: 18px 20px;
+            }
+
+            .link-title {
                 font-size: 15px;
+            }
+
+            .link-subtitle {
+                font-size: 12px;
+                margin-left: 26px;
+            }
+
+            .badge {
+                font-size: 10px;
+                padding: 2px 6px;
             }
 
             .contact {
@@ -160,54 +278,114 @@
     <div class="container">
         <div class="logo-container">
             <div class="logo">
-                TERRATERN LOGO
+                <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/logo.png" alt="Terratern Logo">
+            </div>
+        </div>
+
+        <div class="tagline">
+            <div class="tagline-main">One Stop Solution to Global Talent Mobility</div>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">2M+</span>
+                    <span class="stat-label">Trusted Users</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99.7%</span>
+                    <span class="stat-label">Visa Success Rate</span>
+                </div>
             </div>
         </div>
 
         <div class="links">
             <a href="https://terratern.com/webinar/" class="link-button">
-                <span class="link-icon">📅</span> Book 1:1 Counselling
+                <div class="link-title">
+                    <span class="link-icon">📅</span>
+                    Book 1:1 Counselling
+                    <span class="badge badge-urgent">Limited Slots</span>
+                </div>
+                <div class="link-subtitle">With our Certified Immigration Advisor</div>
             </a>
             
             <a href="https://terratern.com/ai-chat-eligibility-tool/" class="link-button">
-                <span class="link-icon">🤖</span> AI Eligibility Checker
+                <div class="link-title">
+                    <span class="link-icon">🤖</span>
+                    AI Eligibility Checker
+                </div>
+                <div class="link-subtitle">Get the best options tailored for you</div>
             </a>
             
             <a href="https://terratern.com/immigration-consultation-nursing-germany-1/" class="link-button">
-                <span class="link-icon">👨‍⚕️</span> Job Guaranteed Program - Nurse
+                <div class="link-title">
+                    <span class="link-icon">👨‍⚕️</span>
+                    Germany - Nurses Program
+                    <span class="badge">Best Seller</span>
+                </div>
+                <div class="link-subtitle">100% Job Guaranteed for GNM/B.Sc Nursing graduates</div>
             </a>
             
             <a href="https://terratern.com/immigration-consultation-ausbildung-germany-1/" class="link-button">
-                <span class="link-icon">🎓</span> Job Guaranteed Program - Ausbildung
+                <div class="link-title">
+                    <span class="link-icon">🎓</span>
+                    Germany - Ausbildung Program
+                    <span class="badge">Best Seller</span>
+                </div>
+                <div class="link-subtitle">100% Job Guaranteed for Diploma Holders and Engineers</div>
             </a>
             
             <a href="https://terratern.com/immigration-consultation-germany-1/" class="link-button">
-                <span class="link-icon">🇩🇪</span> Germany Opportunity Card
+                <div class="link-title">
+                    <span class="link-icon">🇩🇪</span>
+                    Germany Opportunity Card
+                </div>
+                <div class="link-subtitle">No offer letter required</div>
             </a>
             
             <a href="https://terratern.com/immigration-consultation-australia-1/" class="link-button">
-                <span class="link-icon">🇦🇺</span> Australia PR
+                <div class="link-title">
+                    <span class="link-icon">🇦🇺</span>
+                    Australia PR
+                </div>
+                <div class="link-subtitle">No blocked account needed</div>
             </a>
             
             <a href="https://terratern.com/immigration-consultation-canada-1/" class="link-button">
-                <span class="link-icon">🇨🇦</span> Canada PR
+                <div class="link-title">
+                    <span class="link-icon">🇨🇦</span>
+                    Canada PR
+                </div>
+                <div class="link-subtitle">Easy pathway to the US</div>
             </a>
             
             <a href="https://terratern.com/success-stories/" class="link-button">
-                <span class="link-icon">⭐</span> Success Stories
+                <div class="link-title">
+                    <span class="link-icon">⭐</span>
+                    Success Stories
+                </div>
+                <div class="link-subtitle">See professionals who received their visa faster</div>
             </a>
             
             <a href="https://terratern.com/customer-reviews/" class="link-button">
-                <span class="link-icon">💬</span> Testimonials
+                <div class="link-title">
+                    <span class="link-icon">💬</span>
+                    Testimonials
+                </div>
+                <div class="link-subtitle">Hear from our satisfied clients</div>
             </a>
             
             <a href="https://terratern.com/salaries/" class="link-button">
-                <span class="link-icon">💰</span> Salaries
+                <div class="link-title">
+                    <span class="link-icon">💰</span>
+                    Salaries Abroad
+                </div>
+                <div class="link-subtitle">Compare international salary packages</div>
             </a>
         </div>
 
         <div class="footer">
             <div class="contact">📞 8062358632</div>
+            <div class="contact" style="font-size: 14px; font-weight: 400; margin-top: 8px; margin-bottom: 16px;">
+                📍 19th Main Rd, 1st Sector, HSR Layout, Bengaluru 560102
+            </div>
             <div class="footer-links">
                 <a href="https://terratern.com/privacy-policy/" class="footer-link">Privacy Policy</a>
                 <a href="https://terratern.com/terms-and-condition/" class="footer-link">Terms & Conditions</a>
